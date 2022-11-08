@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es-MX" class="all-body">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="\Styles\styles.css" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Proceso de Compra</title>
+    <script src="\script.js" defer></script>
+  </head>
+
+  <body class="carr-body">
+    <header class="contenedorHeader">
+      <h1 class="carr-h1">Realiza tu compra</h1>
+        <nav>
+          <img src="\img\icon_menu.svg" alt="menu" class="menu">
+    
+          <div class="navbar-left">
+            <img src="\img\mani.png" alt="logo" class="logo">
+        
+            <ul>
+              <li>
+                <a class="blog-a" href="/index.html">Inicio</a>
+              </li>
+              <li>
+                <a class="blog-a" href="/views/blog.html">Blog</a>
+              </li>
+              <li>
+                <a class="blog-a" href="/views/nosotros.html">Nosotros</a>
+              </li>
+              <li>
+                <a class="blog-a" href="/views/formulario.html">Contactanos</a>
+              </li>
+              <li>
+                <a class="blog-a" href="/views/carrito.html">Proceso Compra</a>
+              </li>
+            </ul>
+          </div>
+    
+          <div class="navbar-right">
+            <ul>
+              <li class="navbar-email">mi.correo@saludos.com</li>
+              <li class="navbar-shopping-cart">
+                <img src="\img\icon_shopping_cart.svg" alt="shopping cart">
+                <div>2</div>
+              </li>
+            </ul>
+          </div>
+    
+          <div class="desktop-menu inactive">
+            <ul>
+              <li>
+                <a href="/" class="title">Mis órdenes</a>
+              </li>
+    
+              <li>
+                <a href="/">Mi cuenta</a>
+              </li>
+    
+              <li>
+                <a href="/">Cerrar sesión</a>
+              </li>
+            </ul>
+          </div>
+    
+          <div class="mobile-menu inactive">
+            <ul>
+              <li>
+                <a class="blog-a" href="/index.html">Inicio</a>
+              </li>
+              <li>
+                <a class="blog-a" href="/views/blog.html">Blog</a>
+              </li>
+              <li>
+                <a class="blog-a" href="/views/nosotros.html">Nosotros</a>
+              </li>
+              <li>
+                <a class="blog-a" href="/views/formulario.html">Contactanos</a>
+              </li>
+              <li>
+                <a class="blog-a" href="/views/carrito.html">Proceso Compra</a>
+              </li>
+            </ul>
+        
+            <ul>
+              <li>
+                <a href="/">Mis órdenes</a>
+              </li>
+              <li>
+                <a href="/">Mi cuenta</a>
+              </li>
+            </ul>
+        
+            <ul>
+              <li>
+                <a href="/" class="email">mi.correo@saludos.com</a>
+              </li>
+              <li>
+                <a href="/" class="sign-out">Cerrar sesión</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+    
+        <aside id="shoppingCartContainer" class="inactive">
+          <div class="title-container">
+            <img src="\img/flechita.svg" alt="arrow">
+            <p class="title">Mi orden</p>
+          </div>
+      
+          <div class="my-order-content">
+            <div class="shopping-cart">
+              <figure>
+                <img src="/img/cmielc.jpg" alt="miel">
+              </figure>
+              <p>Crema de Manni Proteina</p>
+              <p>$65</p>
+              <img src="\img/icon_close.png" alt="close">
+            </div>
+      
+            <div class="shopping-cart">
+              <figure>
+                <img src="\img/cproteinc.jpg" alt="proteina">
+              </figure>
+              <p>Crema de Manni Miel</p>
+              <p>$50</p>
+              <img src="\img/icon_close.png" alt="close">
+            </div>
+      
+            <div class="order">
+              <p>
+                <span>Total</span>
+              </p>
+              <p>$115.00</p>
+            </div>
+      
+            <button class="primary-button">
+              Pagar
+            </button>
+          </div>
+        </div>
+        </aside>
+    </header>
+
+    <main>
+      <section class="contenedor-carr">
+        <p>
+          <strong>Tú carrito</strong>
+          <span class="precios" style="color: black">
+            <i class="fa fa-shopping-cart"></i>
+            <b>2</b>
+          </span>
+        </p>
+        <p>Crema de Manni Proteina <span class="precios">$65</span></p>
+        <p>Item 2 <span class="precios">$50</span></p>
+        <hr />
+        <p>
+          Total <span class="precios" style="color: black"><b>$115</b></span>
+        </p>
+      </section>
+
+      <section class="contenedor-carr">
+        <h3 class="carr-h3">Información de envío:</h3>
+        <label class="carr-label"><i class="fa fa-user"></i> Nombre Completo</label>
+        <input class="carr-input" type="text"  id="contact-name" onkeyup="validateName()"/>
+        <span id="name-error"></span>
+        <label class="carr-label"><i class="fa fa-user"></i> Número de télefono</label>
+        <input class="carr-input" type="tel"  id="contact-phone" onkeyup="validatePhone()"/>
+        <span id="phone-error"></span>
+        <label class="carr-label"><i class="fa fa-envelope"></i> Email</label>
+        <input class="carr-input" type="email" id="contact-email" onkeyup="validateEmail()"/>
+        <span id="email-error"></span>
+        <label class="carr-label"><i class="fa fa-address-card-o"></i> Calle, número y colonia</label>
+        <input class="carr-input" type="text"/>
+        <label class="carr-label"><i class="fa fa-institution"></i> Ciudad</label>
+        <input class="carr-input" type="text"/>
+
+        <label class="carr-label">Estado</label>
+        <input class="carr-input" type="text"/>
+
+        <label class="carr-label">Código Postal</label>
+        <input class="carr-input" type="text">
+
+        <div class="action">
+          <button onclick="return validateForm()">Enviar</button>
+          <span id="send-error"></span>
+        </div>
+
+        <h3 class="carr-h3">Pago con tarjeta</h3>
+        <div class="contenedorIconos">
+          <i class="fa fa-cc-visa" style="color: navy"></i>
+          <i class="fa fa-cc-amex" style="color: blue"></i>
+          <i class="fa fa-cc-mastercard" style="color: red"></i>
+          <i class="fa fa-cc-discover" style="color: orange"></i>
+        </div>
+        <label class="carr-label">Nombre en tarjeta</label>
+        <input class="carr-input" type="text"/>
+        <label class="carr-label">Número de tarjeta</label>
+        <input class="carr-input" type="text"/>
+        <label class="carr-label">Mes de expiración</label>
+        <input class="carr-input" type="text"/>
+
+        <label class="carr-label">Año de expiración</label>
+        <input class="carr-input" type="text"/>
+
+        <label class="carr-label">CVV</label>
+        <input class="carr-input" type="text"/>
+      </section>
+    </main>
+
+    <footer class=".contenedor-carr">
+      <form action="/index.html">
+        <button class="botonRojo">Cancelar</button>
+      </form>
+      <form action="#">
+        <button class="botonVerde">Realizar Pedido</button>
+      </form>
+    </footer>
+
+    
+  </body>
+</html>

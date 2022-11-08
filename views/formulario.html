@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es-MX" dir="ltr" class="form-all">
+  <head>
+    <meta charset="utf-8">
+    <title>Contactános</title>
+    <link rel="stylesheet" href="/Styles/styles.css">
+    <script src="/script.js" defer></script>
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+  </head>
+  <body class="form-body">
+
+    <header>
+  
+      <!-- encabezado de la tienda -->
+      <section class="hero">
+        <div class="textos-hero">
+          <h1>Mr. Mani</h1>
+          <p>Le damos sabor a la vida</p>
+        </div>
+        <div class="svg-hero" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150"
+            preserveAspectRatio="none" style="height: 100%; width: 100%;">
+            <path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+              style="stroke: none; fill: #fff;"></path>
+          </svg></div>
+      </section>
+
+      <nav>
+        <img src="\img\icon_menu.svg" alt="menu" class="menu">
+  
+        <div class="navbar-left">
+          <img src="\img\mani.png" alt="logo" class="logo">
+      
+          <ul>
+            <li>
+              <a class="blog-a" href="/index.html">Inicio</a>
+            </li>
+            <li>
+              <a class="blog-a" href="/views/blog.html">Blog</a>
+            </li>
+            <li>
+              <a class="blog-a" href="/views/nosotros.html">Nosotros</a>
+            </li>
+            <li>
+              <a class="blog-a" href="/views/formulario.html">Contactanos</a>
+            </li>
+            <li>
+              <a class="blog-a" href="/views/carrito.html">Proceso Compra</a>
+            </li>
+          </ul>
+        </div>
+  
+        <div class="navbar-right">
+          <ul>
+            <li class="navbar-email">mi.correo@saludos.com</li>
+            <li class="navbar-shopping-cart">
+              <img src="\img\icon_shopping_cart.svg" alt="shopping cart">
+              <div>2</div>
+            </li>
+          </ul>
+        </div>
+
+
+      <div class="desktop-menu inactive">
+        <ul>
+          <li>
+            <a href="/" class="title">Mis órdenes</a>
+          </li>
+
+          <li>
+            <a href="/">Mi cuenta</a>
+          </li>
+
+          <li>
+            <a href="/">Cerrar sesión</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="mobile-menu inactive">
+        <ul>
+          <li>
+            <a class="blog-a" href="/index.html">Inicio</a>
+          </li>
+          <li>
+            <a class="blog-a" href="/views/blog.html">Blog</a>
+          </li>
+          <li>
+            <a class="blog-a" href="/views/nosotros.html">Nosotros</a>
+          </li>
+          <li>
+            <a class="blog-a" href="/views/formulario.html">Contactanos</a>
+          </li>
+          <li>
+            <a class="blog-a" href="/views/carrito.html">Proceso Compra</a>
+          </li>
+        </ul>
+    
+        <ul>
+          <li>
+            <a href="/">Mis órdenes</a>
+          </li>
+          <li>
+            <a href="/">Mi cuenta</a>
+          </li>
+        </ul>
+    
+        <ul>
+          <li>
+            <a href="/" class="email">mi.correo@saludos.com</a>
+          </li>
+          <li>
+            <a href="/" class="sign-out">Cerrar sesión</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <aside id="shoppingCartContainer" class="inactive">
+      <div class="title-container">
+        <img src="\img/flechita.svg" alt="arrow">
+        <p class="title">Mi orden</p>
+      </div>
+  
+      <div class="my-order-content">
+        <div class="shopping-cart">
+          <figure>
+            <img src="/img/cmielc.jpg" alt="miel">
+          </figure>
+          <p>Crema de Manni Proteina</p>
+          <p>$65</p>
+          <img src="\img/icon_close.png" alt="close">
+        </div>
+  
+        <div class="shopping-cart">
+          <figure>
+            <img src="\img/cproteinc.jpg" alt="proteina">
+          </figure>
+          <p>Crema de Manni Miel</p>
+          <p>$50</p>
+          <img src="\img/icon_close.png" alt="close">
+        </div>
+  
+        <div class="order">
+          <p>
+            <span>Total</span>
+          </p>
+          <p>$115.00</p>
+        </div>
+  
+        <button class="primary-button">
+          Pagar
+        </button>
+      </div>
+    </div>
+    </aside>
+
+  </header>
+
+
+
+    <h2 class="titulo">Contáctanos</h2>
+      <div class="container">
+
+        <form>
+
+          <div class="input-group">
+            <label>Nombre completo</label>
+            <input class="form-input" type="text" placeholder="Ingresa tu nombre" id="contact-name" onkeyup="validateName()">
+            <span id="name-error"></span>
+          </div>
+
+          <div class="input-group">
+            <label>Numero de télefono</label>
+            <input class="form-input" type="tel" placeholder="123 456 7890" id="contact-phone" onkeyup="validatePhone()">
+            <span id="phone-error"></span>
+          </div>
+
+          <div class="input-group">
+            <label>Email</label>
+            <input class="form-input" type="email" placeholder="example@domain.com" id="contact-email" onkeyup="validateEmail()">
+            <span id="email-error"></span>
+          </div>
+
+          <div class="input-group">
+            <label>Mensaje</label>
+            <textarea class="form-textarea" rows="8" placeholder="Ingresa tu mensaje" id="contact-message" onkeyup="validateMessage()"></textarea>
+            <span id="message-error"></span>
+          </div>
+
+          <div class="action">
+            <button onclick="return validateForm()">Enviar</button>
+            <span id="send-error"></span>
+
+            <button type="reset" value="Reset">
+                Borrar</button>
+          </div>
+
+        </form>
+
+      </div>
+
+      <footer class="blog-footer">
+
+
+        <ul class="list">
+          <li><a class="blog-a" href="/index.html">Inicio</a></li>
+          <li><a class="blog-a" href="/views/blog.html">Blog</a></li>
+          <li><a class="blog-a" href="/views/nosotros.html">Nosotros</a></li>
+          <li><a class="blog-a" href="#">Contactanos</a></li>
+          <li><a class="blog-a" href="/views/carrito.html">Carrito</a></li>
+        </ul>
+    
+        <p class="copyright">©Copyright 2022 Mr mani. Todos los derechos reservados.</p>
+      </footer>
+
+
+
+  </body>
+</html>
